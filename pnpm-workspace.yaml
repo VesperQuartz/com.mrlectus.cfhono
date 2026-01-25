@@ -1,0 +1,11 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - '@cloudflare/workers-types@4.20260619.1'
+  - '@types/node@26.0.0'
+  - effect@3.21.4
+  - miniflare@4.20260617.0
+  - wrangler@4.102.0
+minimumReleaseAgeStrict: true
