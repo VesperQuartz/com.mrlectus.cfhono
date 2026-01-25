@@ -1,0 +1,44 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "com-mrlectus-cfhono",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-01-25",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"vars": {
+		"MY_VAR": "my-variable"
+	},
+	"kv_namespaces": [
+	  {
+	    "binding": "CACHE",
+	    "id": "74404fa0c16643558fac27fd491331a0"
+	  }
+	],
+	"r2_buckets": [
+	  {
+	    "binding": "STORE",
+	    "bucket_name": "cfhono"
+	  }
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "cfhono",
+			"database_id": "74947c26-7151-4537-ba7d-ca4b5e63e680",
+			"migrations_dir": "drizzle"
+		}
+	],
+	// "ai": {
+	//   "binding": "AI"
+	// },
+	"observability": {
+	  "enabled": true,
+	  "head_sampling_rate": 1
+	},
+	"triggers": {
+		"crons": [
+			"* * * * *"
+		]
+	}
+}
